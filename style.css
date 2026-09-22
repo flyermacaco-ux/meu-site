@@ -32,7 +32,7 @@ nav a {
 }
 
 .hero {
-    min-height: 500px;
+   min-height: 550px;
 
     display: flex;
     flex-direction: column;
@@ -40,8 +40,19 @@ nav a {
     align-items: center;
 
     text-align: center;
-
     padding: 40px;
+
+    background-image:
+        linear-gradient(
+            rgba(0, 0, 0, 0.55),
+            rgba(0, 0, 0, 0.55)
+        ),
+        url("images/banner.jpg");
+
+    background-size: cover;
+    background-position: center;
+
+    color: white;
 }
 
 .hero h2 {
@@ -82,15 +93,17 @@ button {
 }
 
 .card {
-    background: white;
-
-    width: 250px;
-
-    padding: 30px;
-
+background: white;
+    padding: 25px;
     border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 
-    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
 }
 
 .card h3 {
@@ -143,4 +156,19 @@ footer {
         width: 90%;
     }
 
+}
+
+.botao-whatsapp {
+    display: inline-block;
+    background: #25D366;
+    color: white;
+    padding: 14px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: transform 0.2s ease;
+}
+
+.botao-whatsapp:hover {
+    transform: scale(1.05);
 }
